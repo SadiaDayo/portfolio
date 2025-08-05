@@ -15,7 +15,6 @@ function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
-
   return (
     <>
      <CustomCursor />
@@ -30,5 +29,4 @@ function App() {
     </>
   );
 }
-
 export default App;
