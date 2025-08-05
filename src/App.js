@@ -8,7 +8,9 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import Skills from './components/Skills.js';
+import CustomCursor from "./components/CustomCursor";
+import 'animate.css';
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -16,11 +18,13 @@ function App() {
 
   return (
     <>
+     <CustomCursor />
       <Navbar />
       <Hero />
       <About />
-      <Projects />
       <Experience />
+      <Skills/>
+      <Projects />
       <Contact />
       <Footer />
     </>
