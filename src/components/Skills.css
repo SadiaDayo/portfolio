@@ -1,0 +1,101 @@
+/*============================
+=        SKILLS SECTION      =
+============================*/
+
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  text-align: center;
+  
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FCA311;
+  margin-bottom: 1rem;
+}
+
+.skills-subtitle {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-bottom: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.skills-card {
+  background: url('../assets/skillbg.png') no-repeat center center; 
+  background-size: cover;
+  z-index: 0;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+  
+}
+
+.skills-card:hover {
+  transform: translateY(-3px);
+}
+
+.skills-card h3 {
+  font-size: 1.4rem;
+  color: #FCA311;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skills-icon {
+  font-size: 1.5rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #ccc;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/*============================
+=       ANIMATED DOTS        =
+============================*/
+
+.skill-dots {
+  display: flex;
+  gap: 6px;
+  margin-left: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #555;
+  opacity: 0.3;
+  transform: scale(0.8);
+  margin-top: 4px;
+}
+
+
