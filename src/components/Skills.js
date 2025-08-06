@@ -1,25 +1,42 @@
-import React from 'react';
+import React , { useEffect, useRef, useState }from 'react';
 import './Skills.css';
 import { FaCode, FaDatabase, FaPaintBrush, FaTools, FaProjectDiagram,FaLaptopCode } from 'react-icons/fa';
-import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const SkillItem = ({ name, level, isHovered, isMobile }) => {
-  const [filledIndices, setFilledIndices] = React.useState([]);
-  const [animatedOnce, setAnimatedOnce] = React.useState(false);
+  const [filledIndices, setFilledIndices] = useState([]);
+  const [animatedOnce, setAnimatedOnce] = useState(false);
+  const ref = useRef();
 
   useEffect(() => {
-    if (isMobile && !animatedOnce) {
-      const fillDots = async () => {
-        for (let i = 0; i < level; i++) {
-          await new Promise((res) => setTimeout(res, 200));
-          setFilledIndices((prev) => [...prev, i]);
-        }
-        setAnimatedOnce(true);
-      };
+    if (!isMobile || animatedOnce) return;
 
-      fillDots();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !animatedOnce) {
+          const animateDots = async () => {
+            for (let i = 0; i < level; i++) {
+              await new Promise((res) => setTimeout(res, 200));
+              setFilledIndices((prev) => [...prev, i]);
+            }
+            setAnimatedOnce(true);
+          };
+          animateDots();
+        }
+      },
+      {
+        root: null,
+        threshold: 0.3,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
     }
+
+    return () => {
+      if (ref.current) observer.unobserve(ref.current);
+    };
   }, [isMobile, level, animatedOnce]);
 
   const dots = Array.from({ length: 5 }, (_, i) => (
@@ -40,13 +57,12 @@ const SkillItem = ({ name, level, isHovered, isMobile }) => {
   ));
 
   return (
-    <li className="skill-item">
+    <li className="skill-item" ref={ref}>
       <span>{name}</span>
       <div className="skill-dots">{dots}</div>
     </li>
   );
 };
-
 
 
 const SkillCard = ({ title, icon, skills, delay }) => {
