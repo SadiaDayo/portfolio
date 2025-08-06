@@ -1,27 +1,41 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import './Skills.css';
 import { FaCode, FaDatabase, FaPaintBrush, FaTools, FaProjectDiagram,FaLaptopCode } from 'react-icons/fa';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
+const SkillItem = ({ name, level, isHovered, isMobile }) => {
+  const [filledIndices, setFilledIndices] = React.useState([]);
+  const [animatedOnce, setAnimatedOnce] = React.useState(false);
 
+  useEffect(() => {
+    if (isMobile && !animatedOnce) {
+      const fillDots = async () => {
+        for (let i = 0; i < level; i++) {
+          await new Promise((res) => setTimeout(res, 200));
+          setFilledIndices((prev) => [...prev, i]);
+        }
+        setAnimatedOnce(true);
+      };
 
-const dotVariants = {
-  initial: { scale: 0.8, opacity: 0.3, backgroundColor: '#555' },
-  filled: { scale: 1.2, opacity: 1, backgroundColor: '#FCA311' },
-};
+      fillDots();
+    }
+  }, [isMobile, level, animatedOnce]);
 
-const SkillItem = ({ name, level, isHovered }) => {
   const dots = Array.from({ length: 5 }, (_, i) => (
     <motion.span
       key={i}
       className="dot"
-      variants={dotVariants}
-      initial="initial"
-      animate={isHovered && i < level ? 'filled' : 'initial'}
-      transition={{
-        delay: isHovered && i < level ? i * 0.1 : 0,
-        duration: 0.2,
-      }}
+      animate={
+        isMobile
+          ? filledIndices.includes(i)
+            ? { scale: 1.2, opacity: 1, backgroundColor: '#FCA311' }
+            : { scale: 0.8, opacity: 0.3, backgroundColor: '#555' }
+          : isHovered && i < level
+          ? { scale: 1.2, opacity: 1, backgroundColor: '#FCA311' }
+          : { scale: 0.8, opacity: 0.3, backgroundColor: '#555' }
+      }
+      transition={{ duration: 0.3 }}
     />
   ));
 
@@ -33,8 +47,20 @@ const SkillItem = ({ name, level, isHovered }) => {
   );
 };
 
+
+
 const SkillCard = ({ title, icon, skills, delay }) => {
   const [isHovered, setIsHovered] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <motion.div
@@ -49,7 +75,13 @@ const SkillCard = ({ title, icon, skills, delay }) => {
       <h3>{icon} {title}</h3>
       <ul className="skills-list">
         {skills.map((skill, index) => (
-          <SkillItem key={index} name={skill.name} level={skill.level} isHovered={isHovered} />
+          <SkillItem
+            key={index}
+            name={skill.name}
+            level={skill.level}
+            isHovered={isHovered}
+            isMobile={isMobile}
+          />
         ))}
       </ul>
     </motion.div>
