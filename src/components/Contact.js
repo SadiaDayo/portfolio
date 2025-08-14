@@ -16,40 +16,38 @@ const Contact = () => {
   };
 
   const handleSend = (e) => {
-    e.preventDefault();
-    const recipient = "sadiadayo5@gmail.com";
-    const subject = encodeURIComponent(`Message from ${formData.name} (${formData.email})`);
-    const body = encodeURIComponent(formData.message);
+  e.preventDefault();
 
-    window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`,
-      "_blank"
-    );
+  const recipient = "sadiadayo5@gmail.com";
+  const subject = encodeURIComponent(`Message from ${formData.name} (${formData.email})`);
+  const body = encodeURIComponent(formData.message);
 
-    setShowModal(false);
-    setFormData({ name: "", email: "", message: "" });
+  // This works on desktop + mobile
+  window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
-    // ✅ Show popup message
-    setSuccessMsg(true);
-    setTimeout(() => {
-      setSuccessMsg(false);
-    }, 3000);
-  };
+  setShowModal(false);
+  setFormData({ name: "", email: "", message: "" });
+
+  setSuccessMsg(true);
+  setTimeout(() => {
+    setSuccessMsg(false);
+  }, 3000);
+};
 
   return (
     <section id="contact" className="contact-section">
       <div className="contact-overlay">
         <div className="contact-content">
           <div className="contact-left">
-            <h2 className="fw-bold mb-3 text-primary-custom">Get in Touch</h2>
+            <h2 className="fw-bold mb-3 text-primary-custom">📧 Get in Touch</h2>
             <p className="contact-intro">
               I’d love to hear from you! Whether you have a question, want to collaborate, 
-              or just say hello - drop me a message below. <FaHandPointDown/>
+              or just say hello - drop me a message below. 💬⤸
             </p>
 
             <div className="contact-info mb-4">
-              <p><FaMapMarkerAlt /> Shikarpur, Pakistan</p>
-              <p><FaEnvelope /> Click the button below to send me an email</p>
+              <p>📍 Shikarpur, Pakistan</p>
+              <p>╰જ⁀🖱️ˎˊ˗ Click the button below to send me an email</p>
             </div>
 
             <div className="social-icons mt-3">
@@ -62,7 +60,7 @@ const Contact = () => {
             </div>
 
             <button className="btn-outline-custom mt-4" onClick={() => setShowModal(true)}>
-              Send an Email
+              Send an Email ➤
             </button>
 
             {/* ✅ Success Popup */}

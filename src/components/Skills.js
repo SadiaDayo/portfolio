@@ -108,7 +108,7 @@ const Skills = () => {
   return (
     <section id="skills" className="skills-section">
       <div className="container">
-        <h2 className="skills-title">Skills & Expertise</h2>
+        <h2 className="skills-title">💡 Skills & Expertise</h2>
         <p className="skills-subtitle">Proficient in full-stack development, UI/UX design, and modern tools
              <br></br>blending creativity with technical expertise to build responsive, scalable, and user-friendly solutions.</p>
 

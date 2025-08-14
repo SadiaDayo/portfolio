@@ -3,6 +3,7 @@ import "./About.css";
 import webImg from "../assets/web.png";
 import uiImg from "../assets/ui.png";
 import mobImg from "../assets/mob.png";
+import { CiCircleInfo } from "react-icons/ci";
 
 const About = () => {
   return (
@@ -14,7 +15,7 @@ const About = () => {
         {/* About Me Card */}
         <div className="about-card" data-aos="fade-up">
           <h2 className="section-title text-4xl font-bold text-14213D mb-8 border-b-2 border-FCA311 pb-2 inline-block">
-           <span>👩🏻‍💻</span> About Me
+           <span><CiCircleInfo /></span> About Me
           </h2>
           <p className="about-text text-lg leading-relaxed text-242423 mb-6 ">
             I am <strong>Sadia Dayo</strong>, a dedicated{" "}
@@ -61,7 +62,7 @@ const About = () => {
         {/* General Services Card */}
         <div className="services-card " data-aos="fade-up" data-aos-delay="100">
           <h3 className="card-title text-2xl font-semibold text-14213D mb-6 border-b-2 border-FCA311 pb-2">
-            💻 Services
+            <span>💻</span> Services
           </h3>
           <div className="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="service-item flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -123,7 +124,7 @@ const About = () => {
           data-aos-delay="300"
         >
           <h3 className="card-title text-2xl font-semibold text-14213D mb-4 border-b-2 border-FCA311 pb-2">
-            🎓 Education
+            👩🏻‍🎓Education
           </h3>
           <ul className="education-list text-242423 space-y-4">
             <li>

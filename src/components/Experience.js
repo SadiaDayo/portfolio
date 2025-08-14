@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './Experience.css';
-
-import { FaLaptopCode} from 'react-icons/fa';
+import './Experience.css'
 import pic from '../assets/icon.png';
 import img from '../assets/img.png';
 import img2 from '../assets/pic.png';
@@ -110,7 +108,7 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <div className="timeline-item" key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="timeline-icon">
-                  <FaLaptopCode />
+                  👩🏻‍💻 
                 </div>
                 <div className="timeline-content">
                   <h3>{exp.role}</h3>

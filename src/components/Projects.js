@@ -123,7 +123,7 @@ const Projects = () => {
 
   return (
     <section className="projects-section" id="projects">
-      <h2 className="projects-title">Projects </h2> 
+      <h2 className="projects-title">🗂️ Projects </h2> 
 
       <div className="filter-buttons">
         {categories.map((cat, i) => (
@@ -152,7 +152,7 @@ const Projects = () => {
                 ))}
               </ul>
               <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-btn">
-                View Project
+                View Project ⌞⌝
               </a>
             </div>
           </div>

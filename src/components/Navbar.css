@@ -19,10 +19,12 @@
 
 .nav-link {
   font-size: 1.1rem;
-  font-weight: 500;
   color: #E8EDDF !important;
-  padding: 10px 15px;
+  padding: 10px 10px;
   transition: color 0.3s ease, transform 0.3s ease;
+  font-family:"Fira Code", monospace;
+  font-weight: 900;
+  font-style:normal;
 }
 
 .nav-link:hover,
@@ -34,7 +36,7 @@
 .nav-link.text-warning.fw-bold {
   color: #FCA311 !important;
   text-shadow: 0 0 5px rgba(252, 163, 17, 0.5);
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .navbar-toggler {
@@ -58,7 +60,7 @@
 
   .nav-link {
     color: #E8EDDF !important;
-    padding: 8px 0;
+    padding: 2px 0;
   }
 
   .nav-link:hover,
