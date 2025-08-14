@@ -14,7 +14,7 @@ const About = () => {
         {/* About Me Card */}
         <div className="about-card" data-aos="fade-up">
           <h2 className="section-title text-4xl font-bold text-14213D mb-8 border-b-2 border-FCA311 pb-2 inline-block">
-            About Me
+           <span>👩🏻‍💻</span> About Me
           </h2>
           <p className="about-text text-lg leading-relaxed text-242423 mb-6 ">
             I am <strong>Sadia Dayo</strong>, a dedicated{" "}
