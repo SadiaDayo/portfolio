@@ -16,11 +16,7 @@
 html {
   scroll-behavior: smooth;
 }
-.audiowide-regular {
-  font-family: "Audiowide", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+
 
 .App-header {
   background-color: #282c34;
