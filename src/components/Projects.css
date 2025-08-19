@@ -156,6 +156,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+ .projects-title{
+    font-size: 2rem;
+  }
   .project-row {
     flex-direction: column !important;
   }
@@ -173,3 +176,4 @@
     font-size: 0.95rem;
   }
 }
+
