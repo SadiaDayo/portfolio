@@ -155,8 +155,8 @@
   }
 
   .dot {
-    width: 12px;   /* slightly bigger for visibility */
-    height: 12px;
+    width: 6px;   /* slightly bigger for visibility */
+    height: 8px;
   }
 }
 
@@ -172,3 +172,4 @@
     height: 11px;
   }
 }
+
