@@ -328,6 +328,12 @@
 
 /* Responsive Cert Section */
 @media (max-width: 768px) {
+  .section-icon{
+     font-size: 2rem;
+  }
+  .section-subtitle{
+    font-size: 1rem;
+  }
   .cert-card {
     padding: 1rem;
   }
