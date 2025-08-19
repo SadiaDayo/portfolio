@@ -93,6 +93,12 @@
 }
 
 @media (max-width: 576px) {
+  .skills-title{
+     font-size: 2rem;
+  }
+  .skills-subtitle{
+     font-size: 1rem;
+  }
   .dot {
     width: 8px;
     height: 8px;
@@ -142,9 +148,6 @@
 
 /* 🔹 Mobile Screens (small phones) */
 @media (max-width: 576px) {
-  .skills-title{
-     font-size: 2rem;
-  }
   .skill-dots {
     justify-content: center; /* center dots under text */
     margin-left: 0;
@@ -169,4 +172,3 @@
     height: 11px;
   }
 }
-
