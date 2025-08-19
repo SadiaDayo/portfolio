@@ -175,5 +175,9 @@
   .project-details p {
     font-size: 0.95rem;
   }
+  .filter-buttons{
+    font-size: 0.5rem;
+  }
 }
+
 
