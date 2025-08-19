@@ -11,6 +11,7 @@
   font-size: 1.5rem;
   color: #FCA311 !important;
   transition: color 0.3s ease;
+  font-family: 'Audiowide', cursive;
 }
 
 .navbar-brand:hover {
@@ -18,13 +19,12 @@
 }
 
 .nav-link {
-  font-size: 1.1rem;
-  color: #E8EDDF !important;
+  color: #fdfdfd !important;
   padding: 10px 10px;
   transition: color 0.3s ease, transform 0.3s ease;
-  font-family:"Fira Code", monospace;
-  font-weight: 900;
-  font-style:normal;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: 'Oxygen', sans-serif;
 }
 
 .nav-link:hover,
@@ -37,6 +37,8 @@
   color: #FCA311 !important;
   text-shadow: 0 0 5px rgba(252, 163, 17, 0.5);
   font-weight: 900;
+   font-size: 1.2rem;
+  font-family: 'Oxygen', sans-serif;
 }
 
 .navbar-toggler {
@@ -59,7 +61,7 @@
   }
 
   .nav-link {
-    color: #E8EDDF !important;
+    color: #fdfdfd !important;
     padding: 2px 0;
   }
 

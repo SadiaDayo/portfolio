@@ -23,30 +23,27 @@ const Experience = () => {
     {
       company: 'Motiventive Software Company, Karachi',
       role: 'Web Developer Intern',
-      duration: 'Jun 2025 – Aug 2025',
-      jobtype: 'Onsite',
+      duration: 'Jun 2025 – Aug 2025 | Onsite',
       description:
-        'Ongoing internship with focus on building responsive web apps and hands-on collaboration with teams.',
+        'Built and deployed responsive web applications with React.js, JavaScript, and CSS. Designed interactive dashboards using PowerBI, collaborated with designers in Figma, and deployed apps on Vercel with GitHub version control.',
       tools: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Figma', 'PowerBI', 'Github', 'Vercel'],
       image: pic,
     },
     {
       company: 'Prodigy InfoTech, India',
       role: 'Web Developer Intern',
-      duration: 'Feb 2025 – Mar 2025',
-      jobtype: 'Remote',
+      duration: 'Feb 2025 – Mar 2025 | Remote',
       description:
-        'Built interactive apps including stopwatch, Tic-Tac-Toe, weather app, and a portfolio website.',
+        'Developed responsive web applications using HTML, CSS, and JavaScript. Improved usability, optimized layouts, and integrated APIs while ensuring performance and cross-browser compatibility.',
       tools: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'APIs', 'Postman'],
       image: img,
     },
     {
       company: 'CodeAlpha, India',
       role: 'Web Developer Intern',
-      duration: 'Jan 2025 – Feb 2025',
-      jobtype: 'Remote',
+      duration: 'Jan 2025 – Feb 2025 | Remote',
       description:
-        'Contributed to a portfolio website, an expense tracker, and a responsive social media dashboard.',
+        'Created interactive features and dashboards using JavaScript and React.js. Applied responsive design principles, contributed to portfolio projects, and collaborated via GitHub and Vercel.',
       tools: ['HTML', 'CSS', 'JavaScript', 'Github', 'Vercel'],
       image: img2,
     },
@@ -55,45 +52,40 @@ const Experience = () => {
    const certificates = [
     {
       title: 'Web Development Internship',
-      issuer: 'Motiventive',
+      issuer: 'Motiventive | 2025',
       image: cert1,
       description: 'Completed intensive internship focused on building scalable web applications with React and Node.js.',
-      date: 'August 2025'
     },
     { 
       title: 'MongoDB Certified Developer',
-      issuer: 'MongoDB University',
+      issuer: 'MongoDB University | 2024',
       image: cert2,
       description: 'Certified in NoSQL database design, CRUD operations, and performance optimization.',
-      date: '2025'
     },
     {
       title: 'Student Ambassador',
-      issuer: 'Microsoft Learn',
+      issuer: 'Microsoft Learn | 2024',
       image: cert3,
       description: 'Selected for leadership program with specialized training in Large Language Models (LLMs).',
-      date: '2024'
     },
     {
       title: 'Skills Development Certification',
-      issuer: 'CodeAlpha',
+      issuer: 'CodeAlpha | 2024',
       image: cert4,
       description: 'Recognized for problem-solving and technical skills in competitive programming quiz.',
-      date: 'April 2024'
     },
     {
       title: 'Web Development Internship',
-      issuer: 'CodeAlpha',
+      issuer: 'CodeAlpha | 2024',
       image: cert5,
       description: 'Contributed to cutting-edge projects while honing modern web development skills.',
-      date: '2024'
+
     },
     {
       title: 'Web Development Internship',
-      issuer: 'Prodigy InfoTech',
+      issuer: 'Prodigy InfoTech | 2024',
       image: cert6,
       description: 'Gained hands-on experience building modern web solutions and applications.',
-      date: 'February 2024'
     },
   ];
 
@@ -114,7 +106,6 @@ const Experience = () => {
                   <h3>{exp.role}</h3>
                   <span className="company">{exp.company}</span>
                   <p className="duration">{exp.duration}</p>
-                  <p className="duration">{exp.jobtype}</p>
                   <p className="description">{exp.description}</p>
                   <ul className="tools">
                     {exp.tools.map((tool, idx) => (
@@ -163,7 +154,6 @@ const Experience = () => {
                     <h4>{cert.title}</h4>
                     <span className="cert-issuer">{cert.issuer}</span>
                   </div>
-                  <p className="cert-date">{cert.date}</p>
                   <p className="cert-description">{cert.description}</p>
                 </div>
               </div>

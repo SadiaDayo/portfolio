@@ -19,11 +19,9 @@
   padding: 15%;
   margin-top: 9px;
   letter-spacing: 1.5px;
-  color: #FFFFFF; 
+  color: #FDFDFD; 
   
 }
-
-
 
 .hero-overlay {
   text-align: center;
@@ -35,26 +33,28 @@
   z-index: 2;
 }
 
+.body {
+  font-family: 'Mulish', sans-serif; 
+  color: #ffffff; 
+  line-height: 1.6;
+}
+
 .hero-title {
-  font-size: 3.5rem;
-  color: #E5E5E5; /* Dark blue for a professional title */
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-optical-sizing:auto;
-  font-weight: 900;
-  font-style: normal;
+  font-family: 'Audiowide', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color:#FDFDFD;
+  margin-top: 25px;
 }
 
 .hero-subtitle {
-  font-size: 1.8rem;
-  color: #FCA311;
-  margin-bottom: 1.5rem;
-  font-family:"Fira Code", monospace;
-  font-optical-sizing:auto;
-  font-weight: 900;
-  font-style:oblique;
+ font-family: 'Oxygen', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #FCA311; 
 }
+
 
 .typewriter-text {
   display: inline-block;
@@ -62,11 +62,12 @@
 
 .hero-description {
   max-width: 600px;
-  margin: 0 auto 2rem;
+  margin-top: 25px;
   font-size: 1.2rem;
   line-height: 1.7;
-  font-weight: 400;
-  color: #E5E5E5; /* Dark gray for readability */
+  font-weight: 300;
+  font-family: 'Oxygen', sans-serif;
+  color: #fdfdfd; 
   text-shadow: 1px 1px 2px rgba(250, 250, 250, 0.05);
 }
 
@@ -74,7 +75,7 @@
   display: inline-block;
   padding: 12px 25px;
   border: 2px solid #E5E5E5;
-  color: #E5E5E5;
+  color: #fdfdfd;
   text-decoration: none;
   font-weight: 600;
   border-radius: 8px;
@@ -85,22 +86,23 @@
 }
 
 .hero-buttons .hero-btn:hover {
-  background-color: #FCA311; /* Orange for a vibrant hover effect */
-  color: #000000;
+  background-color:#FCA311; 
+  color: #030303;
   transform: translateY(-4px);
   box-shadow: 0 6px 15px rgba(252, 163, 17, 0.3);
 }
 
 .hero-buttons .secondary-btn {
-  background-color: #E5E5E5; /* Soft green-gray for secondary button */
-  color: #000000;
-  border-color: #CFDBD5;
+  background-color: #FDFDFD; 
+  color: #030303;
+  border-color: #FCA311;
+  border: 2px solid #E5E5E5;
 }
 
 .hero-buttons .secondary-btn:hover {
   background-color: #FCA311;
-  color: #E8EDDF;
-  border-color: #FCA311;
+  color: #fdfdfd;
+  border-color: #E5E5E5;
 }
 .hero-btn svg {
   vertical-align: middle;
@@ -108,7 +110,7 @@
 }
 
 .hero-social a {
-  color: #e5e5e5de;
+  color: #E5E5E5;
   transition: transform 0.3s ease, color 0.3s ease;
   margin: 0 10px;
 }
@@ -120,6 +122,7 @@
 
 .social-icon {
   transition: transform 0.3s ease;
+  transform: scale(1.2);
 }
 
 .highlight {
@@ -157,7 +160,7 @@
   background: #FCA311;
   border-radius: 50%;
   filter: blur(150px);
-  opacity: 0.4; /* Subtle effect on light background */
+  opacity: 0.5; /* Subtle effect on light background */
   animation: moveGlow 12s infinite ease-in-out alternate;
   z-index: 1;
 }
@@ -268,14 +271,12 @@
   }
 }
 
-
-
 section .wave {
   position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000000;
+  background: #030303;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
   transition: 0.5s;
 }
@@ -287,7 +288,7 @@ section .wave span {
   top: 0;
   left: 50%;
   transform: translate(-50%, -75%);
-  background: #000;
+  background: #030303;
 }
 .content {
   position: relative;
@@ -310,3 +311,4 @@ section .wave span:nth-child(3) {
     transform: translate(-50%, -75%) rotate(360deg);
   }
 }
+

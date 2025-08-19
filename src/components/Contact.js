@@ -39,7 +39,7 @@ const Contact = () => {
       <div className="contact-overlay">
         <div className="contact-content">
           <div className="contact-left">
-            <h2 className="fw-bold mb-3 text-primary-custom">📧 Get in Touch</h2>
+            <h2 className="fw- mb-3 text-primary-custom">📧 Get in Touch</h2>
             <p className="contact-intro">
               I’d love to hear from you! Whether you have a question, want to collaborate, 
               or just say hello - drop me a message below. 💬⤸
@@ -52,10 +52,10 @@ const Contact = () => {
 
             <div className="social-icons mt-3">
               <a href="https://linkedin.com/in/sadia-dayo" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin />
+                <FaLinkedin size={30}/>
               </a>
               <a href="https://github.com/sadia-dayo" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
+                <FaGithub size={30} />
               </a>
             </div>
 

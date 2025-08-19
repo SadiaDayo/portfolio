@@ -11,26 +11,33 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  color: #fff;
+  color: #fdfdfd;
   padding: 4rem 2rem;
   z-index: 0;
   position: relative;
 }
-
-
+.body {
+  font-family: 'Mulish', sans-serif; 
+  color: #ffffff; 
+  line-height: 1.6;
+}
 .section-heading {
   text-align: center;
   color: #FCA311;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-optical-sizing:auto;
-  font-weight: 900;
-  font-style: normal;
-  letter-spacing: 2px;
+   font-family: 'Audiowide', cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
-/* Timeline Layout */
+.section-subtitle{
+   font-family: 'Oxygen', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+}
 .timeline {
   display: flex;
   flex-direction: column;
@@ -104,27 +111,31 @@
   font-size: 1.5rem;
   color: #FCA311;
   margin-bottom: 5px;
-  font-family:"Fira Code", monospace;
-  font-optical-sizing:auto;
-  font-weight: 900;
-  font-style:normal;
+ font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem
 }
 
 .company {
-  font-weight: 600;
-  font-family: monospace;
-  color: #ccc;
+ max-width: 600px;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  font-weight: 500;
+  font-family: 'Oxygen', sans-serif;
+  color: #fdfdfd;
 }
 
 .duration {
   font-size: 0.9rem;
-  color: #999;
+  color: #cccc;
 }
 
 .description {
   margin-top: 0.5rem;
   font-size: 1rem;
-  color: #ddd;
+  color: #fdfdfd;
+  max-width: 600px;
 }
 
 .tools {
@@ -137,18 +148,18 @@
 }
 
 .tools li {
-  background: #FCA311;
-  padding: 0.3rem 0.7rem;
-  border-radius: 8px;
+  background-color: #FCA311;
+  color: #030303;
+  padding: 0.1rem 0.9rem;
+  border-radius: 9px;
   font-size: 0.8rem;
-  color: #000000;
 }
 
 /* Timeline Image */
 .timeline-image {
   flex: 1;
   max-width: 200px;
-  max-height: 500px;
+  max-height: 300px;
 }
 
 .timeline-image img {
@@ -229,10 +240,18 @@
 
   .description {
     font-size: 0.9rem;
+    max-width: 200px;
+  }
+
+  .timeline-image {
+    flex: none;
+    max-width: 100%;
   }
 
   .timeline-image img {
     max-width: 250px;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -244,14 +263,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: #0a0a0a;
-  color: #fff;
+  color: #Fdfdfd;
   padding: 4rem 2rem;
   text-align: center;
   
 }
 
 .cert-subtitle {
-  color: #ccc;
+  color: #cccc;
   font-size: 1rem;
   margin-bottom: 2rem;
 }
@@ -287,24 +306,24 @@
   object-fit: contain;
   border-radius: 8px;
   margin-bottom: 1rem;
-  background-color: #fff;
+  background-color: #fdfdfd;
   padding: 0.3rem;
   cursor:zoom-in;
 }
-
+.cert-issuer{
+  color: #cccc;
+}
 .cert-card h4 {
   font-size: 1.2rem;
-  color: #fca211;
-  margin-bottom: 0.5rem;
-  font-family:"Fira Code", monospace;
-  font-optical-sizing:auto;
-  font-weight: 900;
-  font-style:normal;
+  color: #fca311;
+ font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem
 }
 
 .cert-card p {
   font-size: 0.95rem;
-  color: #ccc;
+  color: #f5f5f5;
 }
 
 /* Responsive Cert Section */
@@ -373,7 +392,7 @@
   position: absolute;
   top: 20px;
   right: 30px;
-  color: white;
+  color: #Fdfdfd;
   font-size: 3rem;
   cursor: pointer;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaArrowRight, FaDownload } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaArrowRight, FaDownload ,FaEnvelope} from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import "./Hero.css";
 
@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Overlay content */}
       <div className="hero-overlay">
         <h1 className="hero-title">
-          Welcome, I’m <span className="highlight">Sadia Dayo</span>
+         Hi 👋 I’m <span className="highlight">Sadia Dayo</span>
         </h1>
         <h3 className="hero-subtitle">
           <TypeAnimation
@@ -46,9 +46,7 @@ const Hero = () => {
           />
         </h3>
         <p className="hero-description">
-          Transforming visionary ideas into cutting-edge digital solutions with
-          a passion for excellence, I craft responsive and high-performance web
-          applications using the latest technologies.
+         I specialize in developing responsive and high-performance web applications using modern frameworks like React, Node.js, and Next.js. Passionate about problem-solving, I focus on delivering solutions that are not only functional but also user-friendly and impactful.
         </p>
 
         <div className="hero-buttons">
@@ -66,7 +64,7 @@ const Hero = () => {
           </a>
         </div>
 
-        <div className="hero-social mt-4">
+        <div className="hero-social mt-3">
           <a
             href="https://www.linkedin.com/in/sadia-dayo/"
             target="_blank"
@@ -80,6 +78,10 @@ const Hero = () => {
             rel="noreferrer"
           >
             <FaGithub size={30} />
+          </a>
+          
+            <a href="mailto:sadiadayo5@gmail.com">
+            <FaEnvelope size={30} />
           </a>
         </div>
       </div>
