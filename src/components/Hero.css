@@ -347,9 +347,9 @@ section .wave span:nth-child(3) {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .hero-subtitle {
     font-size: 1rem;
@@ -360,7 +360,7 @@ section .wave span:nth-child(3) {
     font-size: 1rem;
     margin-bottom: 2rem;
     line-break:strict;
-    line-height: 2rem;
+    line-height: 1.5rem;
   }
   .hero-buttons{
     margin-bottom: 2rem;
