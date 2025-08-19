@@ -15,7 +15,7 @@
 }
 
 .navbar-brand:hover {
-  color: #F5CB5C !important;
+  color: #FCA311 !important;
 }
 
 .nav-link {
@@ -67,7 +67,7 @@
 
   .nav-link:hover,
   .nav-link.text-warning.fw-bold {
-    color: #FCA311 !important;
+    color: ##FCA311!important;
   }
 }
 
@@ -78,4 +78,5 @@
 .navbar.scrolled {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, #242423 100%) !important;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
 }
