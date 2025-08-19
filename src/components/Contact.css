@@ -180,6 +180,50 @@
     max-width: 100%;
   }
 }
+/* Extra Responsive Typography */
+@media (max-width: 768px) {
+  .contact-left h2 {
+    font-size: 2rem;  /* smaller for mobile */
+    text-align: center;
+  }
+
+  .contact-left h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .contact-intro {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+    justify-content: center; /* center icons + text */
+  }
+
+  .contact-content {
+    padding: 30px 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Even smaller screens (phones <480px) */
+@media (max-width: 480px) {
+  .contact-left h2 {
+    font-size: 1.6rem;
+  }
+  .contact-left h3 {
+    font-size: 1.1rem;
+  }
+  .contact-intro {
+    font-size: 1rem;
+  }
+}
+
 
 /* Modal Overlay */
 .modal-overlay {
