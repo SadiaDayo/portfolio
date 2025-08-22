@@ -101,7 +101,16 @@ const projects = [
   tools: ['Figma'],
   github: 'https://www.figma.com/proto/okJQgq9RVsFYyHj17vQkF3/BakeryUI?node-id=201-2&t=7AKJ4sAWc7F4h68q-1&scaling=scale-down&content-scaling=fixed',
   category: 'UI/UX Design'
+},
+{
+  title: 'Bykea App UI Redesign',
+  image: '/images/bykeaui.png', 
+  description: 'A complete UI/UX redesign of the Bykea ride-hailing and parcel delivery app. The redesign focuses on modern visuals, smoother navigation, improved user journey for ride booking and parcel delivery, and enhanced accessibility. The project highlights skills in user-centered design and Figma prototyping.',
+  tools: ['Figma', 'UI/UX Design'],
+  github: 'https://www.figma.com/proto/your-prototype-link-here',
+  category: 'UI/UX Design'
 }
+
 
 
 ];

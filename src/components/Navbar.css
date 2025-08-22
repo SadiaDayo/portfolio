@@ -1,6 +1,7 @@
 .navbar {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   border-bottom: 2px solid rgba(252, 163, 17, 0.3);
+  border-style: double;
 }
 
 .navbar-dark.bg-black {
@@ -67,7 +68,7 @@
 
   .nav-link:hover,
   .nav-link.text-warning.fw-bold {
-    color: ##FCA311!important;
+    color: #FCA311!important;
   }
 }
 

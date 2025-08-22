@@ -62,7 +62,7 @@ const About = () => {
         {/* General Services Card */}
         <div className="services-card " data-aos="fade-up" data-aos-delay="100">
           <h3 className="card-title text-2xl font-semibold text-14213D mb-6 border-b-2 border-FCA311 pb-2">
-            <span>💻</span> Services
+            <span><svg xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m298-262-56-56 121-122H80v-80h283L242-642l56-56 218 218-218 218Zm222-18v-80h360v80H520Zm0-320v-80h360v80H520Zm120 160v-80h240v80H640Z"/></svg></span> Services
           </h3>
           <div className="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="service-item flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -124,7 +124,7 @@ const About = () => {
           data-aos-delay="300"
         >
           <h3 className="card-title text-2xl font-semibold text-14213D mb-4 border-b-2 border-FCA311 pb-2">
-            👩🏻‍🎓Education
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z"/></svg> Education
           </h3>
           <ul className="education-list text-242423 space-y-4">
             <li>

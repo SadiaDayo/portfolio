@@ -11,6 +11,7 @@ import cert3 from '../assets/cert3.png';
 import cert4 from '../assets/cert1.png';
 import cert5 from '../assets/cert4.png';
 import cert6 from '../assets/cert5.png';
+import {FaLaptopCode } from 'react-icons/fa';
 
 const Experience = () => {
   const [lightboxImage, setLightboxImage] = useState(null);
@@ -100,7 +101,7 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <div className="timeline-item" key={index} data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="timeline-icon">
-                  👩🏻‍💻 
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M160-200v-440 440-15 15Zm0 80q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v171q-18-13-38-22.5T800-508v-132H160v440h283q3 21 9 41t15 39H160Zm240-600h160v-80H400v80ZM720-40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40Zm20-208v-112h-40v128l86 86 28-28-74-74Z"/></svg>
                 </div>
                 <div className="timeline-content">
                   <h3>{exp.role}</h3>
@@ -130,7 +131,7 @@ const Experience = () => {
             Certifications & Achievements
           </h2>
           
-          <p className="section-subtitle">Professional credentials and recognitions</p>
+          <p className="section-subtitle">Professional credentials and recognitions <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FCA311"><path d="m344-60-76-128-144-32 14-148-98-112 98-112-14-148 144-32 76-128 136 58 136-58 76 128 144 32-14 148 98 112-98 112 14 148-144 32-76 128-136-58-136 58Zm34-102 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Zm-42 142 226-226-56-58-170 170-86-84-56 56 142 142Z"/></svg></p>
           
           <div className="cert-grid">
             {certificates.map((cert, idx) => (
@@ -154,7 +155,7 @@ const Experience = () => {
                     <h4>{cert.title}</h4>
                     <span className="cert-issuer">{cert.issuer}</span>
                   </div>
-                  <p className="cert-description">{cert.description}</p>
+                  <p className="cert-description">{cert.description} </p>
                 </div>
               </div>
             ))}

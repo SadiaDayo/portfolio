@@ -116,7 +116,7 @@ const Skills = () => {
           {/* 1. Programming Languages */}
           <SkillCard
             title="Programming Languages"
-            icon={<FaCode className="skills-icon" />}
+            icon={<FaCode  className="skills-icon" />}
             delay="100"
             skills={[
               { name: "JavaScript", level: 5 },
