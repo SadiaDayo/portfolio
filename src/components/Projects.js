@@ -4,6 +4,30 @@ import './Projects.css';
 
 const projects = [
   {
+  title: 'Business Card Design – Oasis Infobyte Internship',
+  image: '/images/businesscard.png',  
+  description: 'Designed a professional business card for FitBurn during Oasis Infobyte Internship Task 3. The design highlights brand identity with bold typography, color balance, and modern layout, ensuring it reflects professionalism and creativity.',
+  tools: ['Canva', 'Branding', 'Typography', 'Graphic Design'],
+  github: 'https://www.canva.com/design/DAGyA_6vonM/oQeBRA0ysZrbM9SLmT7gug/view?utm_content=DAGyA_6vonM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hea3b6d3ff5', 
+  category: 'UI/UX Design'
+},
+
+   {
+    title: 'Logo Design – Oasis Infobyte Internship',
+    image: '/images/logodesign.png',   
+    description: 'Designed a minimal and impactful logo for FitBurn following the KISS (Keep It Simple, Stupid) principle. The design combines a dumbbell and flame to represent strength, discipline, passion, and transformation. Developed during Oasis Infobyte Internship Task 2, focusing on brand identity, simplicity, and scalability.',
+    tools: ['Canva', 'Logo Design', 'Brand Identity', 'Minimalism'],
+    github: 'https://www.canva.com/design/DAGx3kTCs4w/m0SdkY2OAU0_6HZQS7zJdw/watch?utm_content=DAGx3kTCs4w&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hac958818d8',
+    category: 'UI/UX Design'
+  },
+  {
+    title: 'Poster Design – Oasis Infobyte Internship',
+    image: '/images/poster.png',  
+    description: 'Designed a Health Awareness Poster titled “Stay Healthy, Stay Strong – Your Health is Your Wealth” as part of Oasis Infobyte internship. The poster highlights five key habits: Regular Exercise, Balanced Meals, Good Sleep, Hydration, and Regular Checkups. This task enhanced my skills in layout design, visual communication, and digital creativity.',
+    tools: ['Canva', 'Graphic Design', 'Visual Communication'],
+    github: 'https://www.canva.com/design/DAGx2r90on0/_BVso0hrL1gQfZrn0euDGw/view?utm_content=DAGx2r90on0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h06fc8aa876', 
+  },
+  {
   title: 'Node.js + MongoDB CRUD Application',
   image: '/images/crudapp.png',  
   description: 'A full-stack CRUD (Create, Read, Update, Delete) application built with Node.js, Express.js, and MongoDB. Features REST API backend, responsive frontend with user cards, and structured database integration using Mongoose. Demonstrates server-side programming, database connectivity, and UI/UX improvements.',
@@ -11,7 +35,23 @@ const projects = [
   github: 'https://www.canva.com/design/DAGxws-OGLo/ZVPLd734rKwkiSQkXW8WNA/watch?utm_content=DAGxws-OGLo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf4e66ec524', 
   category: 'Web Development'
 },
- {
+{
+  title: 'Bykea App UI Redesign',
+  image: '/images/bykeaui.png', 
+  description: 'A complete UI/UX redesign of the Bykea ride-hailing and parcel delivery app. The redesign focuses on modern visuals, smoother navigation, improved user journey for ride booking and parcel delivery, and enhanced accessibility. The project highlights skills in user-centered design and Figma prototyping.',
+  tools: ['Figma', 'UI/UX Design'],
+  github: 'https://www.figma.com/proto/HLBJTHmuq3nzVLKf4oBMli/BYKEA?node-id=106-1266&p=f&t=a1jO7MLfuiMpRGMz-0&scaling=fit&content-scaling=scale&page-id=0%3A1&starting-point-node-id=106%3A1266',
+  category: 'UI/UX Design'
+},
+{
+  title: 'Bakery Website Redesign',
+  image: '/images/bakeryui.png', 
+  description: 'A modern redesign of a bakery website showcasing improved UI/UX, responsive layout, and customer-friendly interaction. Reflects 3 years of design growth and Figma mastery.',
+  tools: ['Figma'],
+  github: 'https://www.figma.com/proto/okJQgq9RVsFYyHj17vQkF3/BakeryUI?node-id=201-2&t=7AKJ4sAWc7F4h68q-1&scaling=scale-down&content-scaling=fixed',
+  category: 'UI/UX Design'
+},
+   {
   title: 'Personal Portfolio Website (2025)',
   image: '/images/portfoliowebsite.png',
   description: 'A fully responsive and visually engaging personal portfolio built using modern front-end technologies. Developed with a focus on clean UI/UX design, component reusability, and performance optimization. Features dynamic project filtering, animated skill indicators, interactive timelines, and section-based navigation for a seamless user experience. Deployed using modern DevOps tools with continuous integration support.',
@@ -29,22 +69,6 @@ const projects = [
   ],
   github: 'https://sadia-portfolio-six.vercel.app/',
   category: 'Web Development'
-},
-{
-  title: 'Bakery Website Redesign',
-  image: '/images/bakeryui.png', 
-  description: 'A modern redesign of a bakery website showcasing improved UI/UX, responsive layout, and customer-friendly interaction. Reflects 3 years of design growth and Figma mastery.',
-  tools: ['Figma'],
-  github: 'https://www.figma.com/proto/okJQgq9RVsFYyHj17vQkF3/BakeryUI?node-id=201-2&t=7AKJ4sAWc7F4h68q-1&scaling=scale-down&content-scaling=fixed',
-  category: 'UI/UX Design'
-},
-{
-  title: 'Bykea App UI Redesign',
-  image: '/images/bykeaui.png', 
-  description: 'A complete UI/UX redesign of the Bykea ride-hailing and parcel delivery app. The redesign focuses on modern visuals, smoother navigation, improved user journey for ride booking and parcel delivery, and enhanced accessibility. The project highlights skills in user-centered design and Figma prototyping.',
-  tools: ['Figma', 'UI/UX Design'],
-  github: 'https://www.figma.com/proto/HLBJTHmuq3nzVLKf4oBMli/BYKEA?node-id=106-1266&p=f&t=a1jO7MLfuiMpRGMz-0&scaling=fit&content-scaling=scale&page-id=0%3A1&starting-point-node-id=106%3A1266',
-  category: 'UI/UX Design'
 },
   {
     title: 'Tumor-Track FYP Project',

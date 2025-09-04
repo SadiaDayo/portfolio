@@ -11,7 +11,7 @@ import cert3 from '../assets/cert3.png';
 import cert4 from '../assets/cert1.png';
 import cert5 from '../assets/cert4.png';
 import cert6 from '../assets/cert5.png';
-import {FaLaptopCode } from 'react-icons/fa';
+import cert7 from '../assets/cert7.jpeg';
 
 const Experience = () => {
   const [lightboxImage, setLightboxImage] = useState(null);
@@ -87,6 +87,13 @@ const Experience = () => {
       issuer: 'Prodigy InfoTech | 2024',
       image: cert6,
       description: 'Gained hands-on experience building modern web solutions and applications.',
+    },
+    {
+      title: 'Graphic Design Internship',
+      issuer: 'Oasis InfoByte | 2025',
+      image: cert7,
+     description: 'A chance to bring ideas to life through creativity, branding, and digital design.',
+
     },
   ];
 
