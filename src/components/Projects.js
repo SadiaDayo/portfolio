@@ -4,6 +4,14 @@ import './Projects.css';
 
 const projects = [
   {
+    title: 'Infographic Design – Oasis Infobyte Internship',
+    image: '/images/infograph.png',  
+    description: 'Created an infographic titled “FitBurn Formula: Burn · Build · Become” during Oasis Infobyte Internship Task 4. The design explains a 3-step fitness journey using visuals, icons, and typography to make the message impactful, clear, and engaging. Improved my skills in Canva, visual hierarchy, and infographic storytelling.',
+    tools: ['Canva', 'Infographic Design', 'Visual Storytelling', 'Typography'],
+    github: 'https://www.canva.com/design/DAGyNjdpY64/0bbFkW82pKBFB9Aym8jZ4w/watch?utm_content=DAGyNjdpY64&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9ab16cb2da', 
+    category: 'UI/UX Design'
+  },
+  {
   title: 'Business Card Design – Oasis Infobyte Internship',
   image: '/images/businesscard.png',  
   description: 'Designed a professional business card for FitBurn during Oasis Infobyte Internship Task 3. The design highlights brand identity with bold typography, color balance, and modern layout, ensuring it reflects professionalism and creativity.',
