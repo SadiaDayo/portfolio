@@ -23,7 +23,7 @@ const About = () => {
             Software Engineering from <strong>Sukkur IBA University</strong>, an
             esteemed AACSB-accredited institution. Awarded the prestigious{" "}
             <strong>Sindh Endowment Scholarship</strong>, I graduated with a
-            CGPA of 2.9, expected in 2025, reflecting my commitment to academic
+            CGPA of 3.10 , reflecting my commitment to academic
             excellence and professional growth.
           </p>
           <br></br>
@@ -131,7 +131,7 @@ const About = () => {
               <strong>BS in Software Engineering</strong>
               <br />
               Sukkur IBA University (AACSB Accredited) –{" "}
-              <em>CGPA: 2.9 | Expected 2025</em>
+              <em>CGPA: 3.10 | Graduated 2025</em>
               <br />
               <span className="text-sm text-FCA311">
                 Sindh Endowment Scholarship Awardee

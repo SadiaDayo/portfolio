@@ -3,6 +3,15 @@ import { FaCode, FaMobileAlt, FaPaintBrush } from 'react-icons/fa';
 import './Projects.css';
 
 const projects = [
+
+    {
+    title: 'Brochure & Magazine Design – Oasis Infobyte Internship',
+    image: '/images/brochure.png',  
+    description: 'Designed a professional brochure and magazine layout for FitBurn during Oasis Infobyte Internship Task 5. The project involved typography, photography, advertising elements, and visual design principles to create a polished, print-media-ready design. Strengthened my skills in layout design, branding consistency, and creative communication.',
+    tools: ['Canva', 'Brochure Design', 'Print Media', 'Graphic Design'],
+    github: 'https://www.canva.com/design/DAGywqDJA_o/UnnjYg5bkscot1K5trn9qw/watch?utm_content=DAGywqDJA_o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h594f596649', 
+    category: 'UI/UX Design'
+  },
   {
     title: 'Infographic Design – Oasis Infobyte Internship',
     image: '/images/infograph.png',  

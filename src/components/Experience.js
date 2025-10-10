@@ -12,6 +12,11 @@ import cert4 from '../assets/cert1.png';
 import cert5 from '../assets/cert4.png';
 import cert6 from '../assets/cert5.png';
 import cert7 from '../assets/cert7.jpeg';
+import cert8 from '../assets/cert8.jpeg';
+import cert9 from '../assets/cert9.jpeg';
+import cert10 from '../assets/cert10.jpeg';
+import cert11 from '../assets/cert11.jpeg';
+import cert12 from '../assets/cert12.jpeg';
 
 const Experience = () => {
   const [lightboxImage, setLightboxImage] = useState(null);
@@ -51,6 +56,37 @@ const Experience = () => {
   ];
 
    const certificates = [
+    {
+    title: 'Google Prompting Essentials',
+    issuer: 'Google (via Coursera) | 2025',
+    image: cert12,
+    description: 'Completed a multi-course specialization covering professional AI prompting skills, creativity, productivity, and workflow automation.',
+  },
+   
+  {
+    title: 'Speed Up Data Analysis and Presentation Building',
+    issuer: 'Google (via Coursera) | 2025',
+    image: cert11,
+    description: 'Gained expertise in using AI tools to streamline data analysis and create impactful presentations efficiently.',
+  },
+ {
+    title: 'Design Prompts for Everyday Work Tasks',
+    issuer: 'Google (via Coursera) | 2025',
+    image: cert10,
+    description: 'Learned how to design effective AI prompts to enhance productivity and creativity in daily work tasks.',
+  },
+  {
+    title: 'Start Writing Prompts Like a Pro',
+    issuer: 'Google (via Coursera) | 2025',
+    image: cert9,
+    description: 'Mastered foundational techniques for crafting structured, context-aware prompts to get high-quality AI responses.',
+  },
+   {
+    title: 'Use AI as a Creative or Expert Partner',
+    issuer: 'Google (via Coursera) | 2025',
+    image: cert8,
+    description: 'Explored collaboration with AI to generate innovative ideas and expert-level content through advanced prompting strategies.',
+  },
     {
       title: 'Web Development Internship',
       issuer: 'Motiventive | 2025',
