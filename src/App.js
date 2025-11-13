@@ -10,7 +10,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Skills from './components/Skills.js';
 import CustomCursor from "./components/CustomCursor";
-import { SpeedInsights } from "@vercel/speed-insights/react"
 import 'animate.css';
 function App() {
   useEffect(() => {

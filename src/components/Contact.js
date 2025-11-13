@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaLinkedin, FaGithub, FaMapMarkerAlt, FaEnvelope,FaHandPointDown } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import "./Contact.css";
 
 const Contact = () => {
