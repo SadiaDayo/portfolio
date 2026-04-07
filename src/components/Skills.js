@@ -1,15 +1,24 @@
-import React , { useEffect, useRef, useState }from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Skills.css';
-import { FaCode, FaDatabase, FaPaintBrush, FaTools, FaProjectDiagram,FaLaptopCode } from 'react-icons/fa';
+import {
+  FaCode,
+  FaDatabase,
+  FaPaintBrush,
+  FaTools,
+  FaProjectDiagram,
+  FaLaptopCode,
+} from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const SkillItem = ({ name, level, isHovered, isMobile }) => {
   const [filledIndices, setFilledIndices] = useState([]);
   const [animatedOnce, setAnimatedOnce] = useState(false);
-  const ref = useRef();
+  const ref = useRef(null);
 
   useEffect(() => {
     if (!isMobile || animatedOnce) return;
+
+    const currentRef = ref.current;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -21,6 +30,7 @@ const SkillItem = ({ name, level, isHovered, isMobile }) => {
             }
             setAnimatedOnce(true);
           };
+
           animateDots();
         }
       },
@@ -30,12 +40,14 @@ const SkillItem = ({ name, level, isHovered, isMobile }) => {
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
     };
   }, [isMobile, level, animatedOnce]);
 
@@ -64,17 +76,18 @@ const SkillItem = ({ name, level, isHovered, isMobile }) => {
   );
 };
 
-
 const SkillCard = ({ title, icon, skills, delay }) => {
-  const [isHovered, setIsHovered] = React.useState(false);
-  const [isMobile, setIsMobile] = React.useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -88,7 +101,10 @@ const SkillCard = ({ title, icon, skills, delay }) => {
       whileHover={{ y: -5 }}
       transition={{ type: 'spring', stiffness: 200 }}
     >
-      <h3>{icon} {title}</h3>
+      <h3>
+        {icon} {title}
+      </h3>
+
       <ul className="skills-list">
         {skills.map((skill, index) => (
           <SkillItem
@@ -109,95 +125,93 @@ const Skills = () => {
     <section id="skills" className="skills-section">
       <div className="container">
         <h2 className="skills-title">💡 Skills & Expertise</h2>
-        <p className="skills-subtitle">Proficient in full-stack development, UI/UX design, and modern tools
-             <br></br>blending creativity with technical expertise to build responsive, scalable, and user-friendly solutions.</p>
+        <p className="skills-subtitle">
+          Proficient in full-stack development, UI/UX design, and modern tools
+          <br />
+          blending creativity with technical expertise to build responsive,
+          scalable, and user-friendly solutions.
+        </p>
 
         <div className="skills-grid">
-          {/* 1. Programming Languages */}
           <SkillCard
             title="Programming Languages"
-            icon={<FaCode  className="skills-icon" />}
+            icon={<FaCode className="skills-icon" />}
             delay="100"
             skills={[
-              { name: "JavaScript", level: 5 },
-              { name: "Python", level: 5 },
-              { name: "Java", level: 5 },
-              { name: "C++", level: 4 },
-              { name: "C", level: 4 },
-              { name: "Kotlin", level: 3 },
-              { name: "Solidity", level: 3 },
+              { name: 'JavaScript', level: 5 },
+              { name: 'Python', level: 5 },
+              { name: 'Java', level: 5 },
+              { name: 'C++', level: 4 },
+              { name: 'C', level: 4 },
+              { name: 'Kotlin', level: 3 },
+              { name: 'Solidity', level: 3 },
             ]}
           />
-            {/* 2. Frontend Development */}
-            <SkillCard
+
+          <SkillCard
             title="Frontend Development"
             icon={<FaLaptopCode className="skills-icon" />}
             delay="200"
             skills={[
-              { name: "React.js", level: 5 },
-              { name: "Redux", level: 4 },
-              { name: "HTML5 / CSS3", level: 5 },
-              { name: "Bootstrap", level: 5 },
-              { name: "Tailwind CSS", level: 3 },
-              { name: "Flutter", level: 4 },
+              { name: 'React.js', level: 5 },
+              { name: 'Redux', level: 4 },
+              { name: 'HTML5 / CSS3', level: 5 },
+              { name: 'Bootstrap', level: 5 },
+              { name: 'Tailwind CSS', level: 3 },
+              { name: 'Flutter', level: 4 },
             ]}
           />
 
-          
-
-          {/* 4. UI/UX & Design Tools */}
           <SkillCard
             title="UI/UX & Design Tools"
             icon={<FaPaintBrush className="skills-icon" />}
             delay="400"
             skills={[
-              { name: "Figma", level: 5 },
-              { name: "Canva", level: 5 },
-              { name: "Adobe XD", level: 4 },
-              { name: "Wireframing", level: 5 },
-              { name: "User Flow Mapping", level: 4 },
-              { name: "Prototyping", level: 5 },
-              { name: "Design Systems", level: 4 },
+              { name: 'Figma', level: 5 },
+              { name: 'Canva', level: 5 },
+              { name: 'Adobe XD', level: 4 },
+              { name: 'Wireframing', level: 5 },
+              { name: 'User Flow Mapping', level: 4 },
+              { name: 'Prototyping', level: 5 },
+              { name: 'Design Systems', level: 4 },
             ]}
           />
-          {/* 3. Backend & Databases */}
+
           <SkillCard
             title="Backend & Databases"
             icon={<FaDatabase className="skills-icon" />}
             delay="300"
             skills={[
-              { name: "Node.js", level: 4 },
-              { name: "MongoDB", level: 4 },
-              { name: "PostgreSQL", level: 3 },
-              { name: "MySQL", level: 3 },
-              { name: "REST APIs", level: 4 },
+              { name: 'Node.js', level: 4 },
+              { name: 'MongoDB', level: 4 },
+              { name: 'PostgreSQL', level: 3 },
+              { name: 'MySQL', level: 3 },
+              { name: 'REST APIs', level: 4 },
             ]}
           />
-            {/* 6. Project & Collaboration Tools */}
+
           <SkillCard
             title="Project & Collaboration"
             icon={<FaProjectDiagram className="skills-icon" />}
             delay="600"
             skills={[
-              { name: "Notion", level: 5 },
-              { name: "Miro", level: 3 },
+              { name: 'Notion', level: 5 },
+              { name: 'Miro', level: 3 },
             ]}
           />
-          {/* 5. Dev Tools & Platforms */}
+
           <SkillCard
             title="Dev Tools & Platforms"
             icon={<FaTools className="skills-icon" />}
             delay="500"
             skills={[
-              { name: "Git / GitHub", level: 5 },
-              { name: "Postman", level: 5 },
-              { name: "Power BI", level: 5 },
-              { name: "Tableau", level: 5 },
-              { name: "Vercel", level: 5 },
+              { name: 'Git / GitHub', level: 5 },
+              { name: 'Postman', level: 5 },
+              { name: 'Power BI', level: 5 },
+              { name: 'Tableau', level: 5 },
+              { name: 'Vercel', level: 5 },
             ]}
           />
-
-         
         </div>
       </div>
     </section>
