@@ -45,14 +45,16 @@ const Hero = () => {
             className="typewriter-text"
           />
         </h3>
-        <p className="hero-description">
-         I specialize in developing responsive and high-performance web applications using modern frameworks like React, Node.js, and Next.js. Passionate about problem-solving, I focus on delivering solutions that are not only functional but also user-friendly and impactful.
-        </p>
+       <p className="hero-description">
+  I’m a Software Engineering graduate passionate about frontend development,
+  UI/UX design, and building responsive web applications that combine clean
+  design with real-world functionality.
+</p>
 
         <div className="hero-buttons">
           <a href="#projects" className="hero-btn">
             <FaArrowRight style={{ marginRight: "8px" }} />
-            Explore My Work
+            View Projects
           </a>
           <a
             href="/Sadia_Dayo_CV.pdf"
