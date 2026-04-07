@@ -55,7 +55,7 @@ const Hero = () => {
             Explore My Work
           </a>
           <a
-            href="/Sadia_Dayo_CV_.pdf"
+            href="/Sadia_Dayo_CV.pdf"
             download="Sadia_Dayo_Resume.pdf"
             className="hero-btn secondary-btn"
           >
