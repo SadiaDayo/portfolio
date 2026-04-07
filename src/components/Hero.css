@@ -82,7 +82,9 @@
   margin-right: 15px;
   transition: all 0.4s ease;
   background-color: transparent;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  align-items:center;
+
 }
 
 .hero-buttons .hero-btn:hover {
@@ -108,7 +110,10 @@
   vertical-align: middle;
   margin-right: 6px;
 }
-
+.hero-social{
+  align-items: center;
+  margin-left:-15px;
+}
 .hero-social a {
   color: #E5E5E5;
   transition: transform 0.3s ease, color 0.3s ease;
