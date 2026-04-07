@@ -14,7 +14,7 @@ const Hero = () => {
       </div>
 {/* Glow Circle */}
   <div className="glow-circle"></div>
-      {/* Overlay content */} 
+      {/* Overlay content */}
       <div className="hero-overlay">
         <h1 className="hero-title">
          Hi 👋 I’m <span className="highlight">Sadia Dayo</span>
@@ -55,7 +55,7 @@ const Hero = () => {
             Explore My Work
           </a>
           <a
-            href="/Sadia_Dayo_CV_.pdf" 
+            href="/Sadia_Dayo_CV.pdf"
             download="Sadia_Dayo_Resume.pdf"
             className="hero-btn secondary-btn"
           >
