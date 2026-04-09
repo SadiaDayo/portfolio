@@ -1,155 +1,177 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { FaCode, FaMobileAlt, FaPaintBrush } from 'react-icons/fa';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import './Projects.css';
-
 const projects = [
-
-    {
-    title: 'Brochure & Magazine Design – Oasis Infobyte Internship',
-    image: '/images/brochure.png',  
-    description: 'Designed a professional brochure and magazine layout for FitBurn during Oasis Infobyte Internship Task 5. The project involved typography, photography, advertising elements, and visual design principles to create a polished, print-media-ready design. Strengthened my skills in layout design, branding consistency, and creative communication.',
-    tools: ['Canva', 'Brochure Design', 'Print Media', 'Graphic Design'],
-    github: 'https://www.canva.com/design/DAGywqDJA_o/UnnjYg5bkscot1K5trn9qw/watch?utm_content=DAGywqDJA_o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h594f596649', 
-    category: 'UI/UX Design'
-  },
-  {
-    title: 'Infographic Design – Oasis Infobyte Internship',
-    image: '/images/infograph.png',  
-    description: 'Created an infographic titled “FitBurn Formula: Burn · Build · Become” during Oasis Infobyte Internship Task 4. The design explains a 3-step fitness journey using visuals, icons, and typography to make the message impactful, clear, and engaging. Improved my skills in Canva, visual hierarchy, and infographic storytelling.',
-    tools: ['Canva', 'Infographic Design', 'Visual Storytelling', 'Typography'],
-    github: 'https://www.canva.com/design/DAGyNjdpY64/0bbFkW82pKBFB9Aym8jZ4w/watch?utm_content=DAGyNjdpY64&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9ab16cb2da', 
-    category: 'UI/UX Design'
-  },
-  {
-  title: 'Business Card Design – Oasis Infobyte Internship',
-  image: '/images/businesscard.png',  
-  description: 'Designed a professional business card for FitBurn during Oasis Infobyte Internship Task 3. The design highlights brand identity with bold typography, color balance, and modern layout, ensuring it reflects professionalism and creativity.',
-  tools: ['Canva', 'Branding', 'Typography', 'Graphic Design'],
-  github: 'https://www.canva.com/design/DAGyA_6vonM/oQeBRA0ysZrbM9SLmT7gug/view?utm_content=DAGyA_6vonM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hea3b6d3ff5', 
-  category: 'UI/UX Design'
-},
-
-   {
-    title: 'Logo Design – Oasis Infobyte Internship',
-    image: '/images/logodesign.png',   
-    description: 'Designed a minimal and impactful logo for FitBurn following the KISS (Keep It Simple, Stupid) principle. The design combines a dumbbell and flame to represent strength, discipline, passion, and transformation. Developed during Oasis Infobyte Internship Task 2, focusing on brand identity, simplicity, and scalability.',
-    tools: ['Canva', 'Logo Design', 'Brand Identity', 'Minimalism'],
-    github: 'https://www.canva.com/design/DAGx3kTCs4w/m0SdkY2OAU0_6HZQS7zJdw/watch?utm_content=DAGx3kTCs4w&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hac958818d8',
-    category: 'UI/UX Design'
-  },
-  {
-    title: 'Poster Design – Oasis Infobyte Internship',
-    image: '/images/poster.png',  
-    description: 'Designed a Health Awareness Poster titled “Stay Healthy, Stay Strong – Your Health is Your Wealth” as part of Oasis Infobyte internship. The poster highlights five key habits: Regular Exercise, Balanced Meals, Good Sleep, Hydration, and Regular Checkups. This task enhanced my skills in layout design, visual communication, and digital creativity.',
-    tools: ['Canva', 'Graphic Design', 'Visual Communication'],
-    github: 'https://www.canva.com/design/DAGx2r90on0/_BVso0hrL1gQfZrn0euDGw/view?utm_content=DAGx2r90on0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h06fc8aa876', 
-  },
-  {
-  title: 'Node.js + MongoDB CRUD Application',
-  image: '/images/crudapp.png',  
-  description: 'A full-stack CRUD (Create, Read, Update, Delete) application built with Node.js, Express.js, and MongoDB. Features REST API backend, responsive frontend with user cards, and structured database integration using Mongoose. Demonstrates server-side programming, database connectivity, and UI/UX improvements.',
-  tools: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'HTML', 'CSS', 'JavaScript'],
-  github: 'https://www.canva.com/design/DAGxws-OGLo/ZVPLd734rKwkiSQkXW8WNA/watch?utm_content=DAGxws-OGLo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf4e66ec524', 
-  category: 'Web Development'
-},
-{
-  title: 'Bykea App UI Redesign',
-  image: '/images/bykeaui.png', 
-  description: 'A complete UI/UX redesign of the Bykea ride-hailing and parcel delivery app. The redesign focuses on modern visuals, smoother navigation, improved user journey for ride booking and parcel delivery, and enhanced accessibility. The project highlights skills in user-centered design and Figma prototyping.',
-  tools: ['Figma', 'UI/UX Design'],
-  github: 'https://www.figma.com/proto/HLBJTHmuq3nzVLKf4oBMli/BYKEA?node-id=106-1266&p=f&t=a1jO7MLfuiMpRGMz-0&scaling=fit&content-scaling=scale&page-id=0%3A1&starting-point-node-id=106%3A1266',
-  category: 'UI/UX Design'
-},
-{
-  title: 'Bakery Website Redesign',
-  image: '/images/bakeryui.png', 
-  description: 'A modern redesign of a bakery website showcasing improved UI/UX, responsive layout, and customer-friendly interaction. Reflects 3 years of design growth and Figma mastery.',
-  tools: ['Figma'],
-  github: 'https://www.figma.com/proto/okJQgq9RVsFYyHj17vQkF3/BakeryUI?node-id=201-2&t=7AKJ4sAWc7F4h68q-1&scaling=scale-down&content-scaling=fixed',
-  category: 'UI/UX Design'
-},
-   {
-  title: 'Personal Portfolio Website (2025)',
-  image: '/images/portfoliowebsite.png',
-  description: 'A fully responsive and visually engaging personal portfolio built using modern front-end technologies. Developed with a focus on clean UI/UX design, component reusability, and performance optimization. Features dynamic project filtering, animated skill indicators, interactive timelines, and section-based navigation for a seamless user experience. Deployed using modern DevOps tools with continuous integration support.',
-  tools:  [
-    'React.js',
-    'React-Bootstrap',
-    'JavaScript (ES6+)',
-    'HTML5',
-    'CSS3',
-    'Responsive Design',
-    'UI/UX Design',
-    'React Icons',
-    'Vercel',
-    'Git & GitHub'
-  ],
-  github: 'https://sadia-portfolio-six.vercel.app/',
-  category: 'Web Development'
-},
   {
     title: 'Tumor-Track FYP Project',
     image: '/images/tumortrack.png',
-    description: 'AI-powered system for brain tumor Detection, Segmentation, and Classification using deep learning. Features Gemini LLM for treatment suggestions and a full-stack deployment.',
-    tools: ['Python', 'CNN', 'U-Net', 'Flask', 'React.js', 'LLM', 'Node.js','Github','Vercel'],
+    description:
+      'AI-powered system for brain tumor Detection, Segmentation, and Classification using deep learning. Features Gemini LLM for treatment suggestions and a full-stack deployment.',
+    tools: ['Python', 'CNN', 'U-Net', 'Flask', 'React.js', 'LLM', 'Node.js', 'Github', 'Vercel'],
     github: 'https://tumor-track.vercel.app/home',
-    category: 'Web Development'
+    category: 'Web Development',
   },
+   {
+    title: 'Bykea App UI Redesign',
+    image: '/images/bykeaui.png',
+    description:
+      'A complete UI/UX redesign of the Bykea ride-hailing and parcel delivery app with improved flow, accessibility, and modern visuals.',
+    tools: ['Figma', 'UI/UX Design'],
+    github:
+      'https://www.figma.com/proto/HLBJTHmuq3nzVLKf4oBMli/BYKEA?node-id=106-1266&p=f&t=a1jO7MLfuiMpRGMz-0&scaling=fit&content-scaling=scale&page-id=0%3A1&starting-point-node-id=106%3A1266',
+    category: 'UI/UX Design',
+  },
+   {
+    title: 'Node.js + MongoDB CRUD Application',
+    image: '/images/crudapp.png',
+    description:
+      'A full-stack CRUD application built with Node.js, Express.js, and MongoDB. Features REST API backend, responsive frontend, and structured database integration using Mongoose.',
+    tools: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'HTML', 'CSS', 'JavaScript'],
+    github:
+      'https://www.canva.com/design/DAGxws-OGLo/ZVPLd734rKwkiSQkXW8WNA/watch?utm_content=DAGxws-OGLo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf4e66ec524',
+    category: 'Web Development',
+  },
+ 
+  {
+    title: 'Brochure & Magazine Design – Oasis Infobyte Internship',
+    image: '/images/brochure.png',
+    description:
+      'Designed a professional brochure and magazine layout for FitBurn during Oasis Infobyte Internship Task 5. The project involved typography, photography, advertising elements, and visual design principles to create a polished, print-media-ready design. Strengthened my skills in layout design, branding consistency, and creative communication.',
+    tools: ['Canva', 'Brochure Design', 'Print Media', 'Graphic Design'],
+    github:
+      'https://www.canva.com/design/DAGywqDJA_o/UnnjYg5bkscot1K5trn9qw/watch?utm_content=DAGywqDJA_o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h594f596649',
+    category: 'UI/UX Design',
+  },
+  {
+    title: 'Infographic Design – Oasis Infobyte Internship',
+    image: '/images/infograph.png',
+    description:
+      'Created an infographic titled “FitBurn Formula: Burn · Build · Become” during Oasis Infobyte Internship Task 4. The design explains a 3-step fitness journey using visuals, icons, and typography to make the message impactful, clear, and engaging. Improved my skills in Canva, visual hierarchy, and infographic storytelling.',
+    tools: ['Canva', 'Infographic Design', 'Visual Storytelling', 'Typography'],
+    github:
+      'https://www.canva.com/design/DAGyNjdpY64/0bbFkW82pKBFB9Aym8jZ4w/watch?utm_content=DAGyNjdpY64&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9ab16cb2da',
+    category: 'UI/UX Design',
+  },
+  {
+    title: 'Business Card Design – Oasis Infobyte Internship',
+    image: '/images/businesscard.png',
+    description:
+      'Designed a professional business card for FitBurn during Oasis Infobyte Internship Task 3. The design highlights brand identity with bold typography, color balance, and modern layout, ensuring it reflects professionalism and creativity.',
+    tools: ['Canva', 'Branding', 'Typography', 'Graphic Design'],
+    github:
+      'https://www.canva.com/design/DAGyA_6vonM/oQeBRA0ysZrbM9SLmT7gug/view?utm_content=DAGyA_6vonM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hea3b6d3ff5',
+    category: 'UI/UX Design',
+  },
+  {
+    title: 'Logo Design – Oasis Infobyte Internship',
+    image: '/images/logodesign.png',
+    description:
+      'Designed a minimal and impactful logo for FitBurn following the KISS principle. The design combines a dumbbell and flame to represent strength, discipline, passion, and transformation.',
+    tools: ['Canva', 'Logo Design', 'Brand Identity', 'Minimalism'],
+    github:
+      'https://www.canva.com/design/DAGx3kTCs4w/m0SdkY2OAU0_6HZQS7zJdw/watch?utm_content=DAGx3kTCs4w&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hac958818d8',
+    category: 'UI/UX Design',
+  },
+  {
+    title: 'Poster Design – Oasis Infobyte Internship',
+    image: '/images/poster.png',
+    description:
+      'Designed a Health Awareness Poster titled “Stay Healthy, Stay Strong – Your Health is Your Wealth” as part of Oasis Infobyte internship.',
+    tools: ['Canva', 'Graphic Design', 'Visual Communication'],
+    github:
+      'https://www.canva.com/design/DAGx2r90on0/_BVso0hrL1gQfZrn0euDGw/view?utm_content=DAGx2r90on0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h06fc8aa876',
+    category: 'UI/UX Design',
+  },
+ 
+  {
+    title: 'Bakery Website Redesign',
+    image: '/images/bakeryui.png',
+    description:
+      'A modern redesign of a bakery website showcasing improved UI/UX, responsive layout, and customer-friendly interaction.',
+    tools: ['Figma'],
+    github:
+      'https://www.figma.com/proto/okJQgq9RVsFYyHj17vQkF3/BakeryUI?node-id=201-2&t=7AKJ4sAWc7F4h68q-1&scaling=scale-down&content-scaling=fixed',
+    category: 'UI/UX Design',
+  },
+  {
+    title: 'Personal Portfolio Website (2025)',
+    image: '/images/portfoliowebsite.png',
+    description:
+      'A fully responsive and visually engaging personal portfolio built using modern front-end technologies with dynamic project filtering, animated skill indicators, and section-based navigation.',
+    tools: [
+      'React.js',
+      'React-Bootstrap',
+      'JavaScript (ES6+)',
+      'HTML5',
+      'CSS3',
+      'Responsive Design',
+      'UI/UX Design',
+      'React Icons',
+      'Vercel',
+      'Git & GitHub',
+    ],
+    github: 'https://sadia-portfolio-six.vercel.app/',
+    category: 'Web Development',
+  },
+  
   {
     title: 'Social Media Dashboard',
     image: '/images/socialmediadashboard.png',
-    description: 'Analytics-driven responsive dashboard for managing social media content. Built during CodeAlpha internship.',
-    tools: ['HTML', 'CSS', 'JavaScript', 'REST API', 'Responsive Design','Github','Vercel'],
+    description:
+      'Analytics-driven responsive dashboard for managing social media content. Built during CodeAlpha internship.',
+    tools: ['HTML', 'CSS', 'JavaScript', 'REST API', 'Responsive Design', 'Github', 'Vercel'],
     github: 'https://code-alpha-media-dashboard.vercel.app/',
-    category: 'Web Development'
+    category: 'Web Development',
   },
   {
     title: 'Weather Application',
     image: '/images/weatherapp.png',
-    description: 'Real-time weather data fetching application built using REST APIs. Developed during Prodigy InfoTech internship.',
-    tools: ['HTML', 'CSS', 'JavaScript', 'REST API', 'Bootstrap','Github','Vercel'],
+    description:
+      'Real-time weather data fetching application built using REST APIs. Developed during Prodigy InfoTech internship.',
+    tools: ['HTML', 'CSS', 'JavaScript', 'REST API', 'Bootstrap', 'Github', 'Vercel'],
     github: 'https://prodigy-wd-05-six.vercel.app/',
-    category: 'Mobile Applications'
+    category: 'Mobile Applications',
   },
   {
     title: 'Portfolio Website Prodigy',
     image: '/images/profile.png',
     description: 'Fully responsive personal portfolio showcasing skills, resume, and projects.',
-    tools: ['HTML', 'CSS', 'JavaScript', 'Bootstrap','Github','Vercel'],
+    tools: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Github', 'Vercel'],
     github: 'https://prodigy-wd-04-fawn.vercel.app/',
-    category: 'UI/UX Design'
+    category: 'UI/UX Design',
   },
   {
     title: 'Expense Tracker Application',
     image: '/images/expensetracker.png',
     description: 'Feature-rich expense tracker with add/edit/delete and localStorage integration.',
-    tools: ['HTML', 'CSS', 'JavaScript','Github','Vercel'],
+    tools: ['HTML', 'CSS', 'JavaScript', 'Github', 'Vercel'],
     github: 'https://code-alpha-expense-tracker-five.vercel.app/',
-    category: 'Mobile Applications'
+    category: 'Mobile Applications',
   },
   {
     title: 'Tic-Tac-Toe Game',
     image: '/images/tictac.png',
     description: 'Classic interactive game with full game logic, winner detection, and reset functionality.',
-    tools: ['HTML', 'CSS', 'JavaScript','Github','Vercel'],
+    tools: ['HTML', 'CSS', 'JavaScript', 'Github', 'Vercel'],
     github: 'https://prodigy-wd-03-ecru.vercel.app/',
-    category: 'Mobile Applications'
+    category: 'Mobile Applications',
   },
   {
     title: 'Portfolio Website (CodeAlpha)',
     image: '/images/portfolio.png',
     description: 'Responsive portfolio website created during CodeAlpha internship.',
-    tools: ['HTML', 'CSS', 'JavaScript','Github','Vercel'],
+    tools: ['HTML', 'CSS', 'JavaScript', 'Github', 'Vercel'],
     github: 'https://code-alpha-personal-portfolio-website.vercel.app/',
-    category: 'UI/UX Design'
+    category: 'UI/UX Design',
   },
   {
     title: 'Stopwatch Application',
     image: '/images/stopwatch.png',
     description: 'Functional stopwatch with Start, Stop, Lap, and Reset features.',
-    tools: ['HTML', 'CSS', 'JavaScript','Github','Vercel'],
+    tools: ['HTML', 'CSS', 'JavaScript', 'Github', 'Vercel'],
     github: 'https://stopwatch-pied-six.vercel.app/',
-    category: 'Mobile Applications'
+    category: 'Mobile Applications',
   },
   {
     title: 'Responsive Landing Page',
@@ -157,39 +179,52 @@ const projects = [
     description: 'Modern responsive landing page with animation, form, and service section.',
     tools: ['HTML', 'CSS', 'JavaScript'],
     github: 'https://prodigy-wd-01-bay.vercel.app/',
-    category: 'UI/UX Design'
+    category: 'UI/UX Design',
   },
-  
-
-
-
 ];
 
 const categories = [
   { name: 'All', icon: null },
   { name: 'Web Development', icon: <FaCode /> },
   { name: 'Mobile Applications', icon: <FaMobileAlt /> },
-  { name: 'UI/UX Design', icon: <FaPaintBrush /> }
+  { name: 'UI/UX Design', icon: <FaPaintBrush /> },
 ];
+
+const INITIAL_VISIBLE = 4;
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [showAll, setShowAll] = useState(false);
 
-  const filteredProjects =
-    selectedCategory === 'All'
+  const filteredProjects = useMemo(() => {
+    return selectedCategory === 'All'
       ? projects
-      : projects.filter(project => project.category === selectedCategory);
+      : projects.filter((project) => project.category === selectedCategory);
+  }, [selectedCategory]);
+
+  const visibleProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, INITIAL_VISIBLE);
+
+  const hasMoreProjects = filteredProjects.length > INITIAL_VISIBLE;
+
+  const handleCategoryChange = (categoryName) => {
+    setSelectedCategory(categoryName);
+    setShowAll(false);
+  };
 
   return (
     <section className="projects-section" id="projects">
-      <h2 className="projects-title">🗂️ Projects </h2> 
-
+      <h2 className="projects-title">🗂️ Projects</h2>
+<p className="projects-subtitle">
+  Featured projects that showcase my strengths in web development, UI/UX design, and creating user-centered solutions.
+</p>
       <div className="filter-buttons">
         {categories.map((cat, i) => (
           <button
             key={i}
             className={`filter-btn ${selectedCategory === cat.name ? 'active' : ''}`}
-            onClick={() => setSelectedCategory(cat.name)}
+            onClick={() => handleCategoryChange(cat.name)}
           >
             {cat.icon && <span className="filter-icon">{cat.icon}</span>} {cat.name}
           </button>
@@ -197,26 +232,67 @@ const Projects = () => {
       </div>
 
       <div className="projects-list">
-        {filteredProjects.map((project, index) => (
-          <div className={`project-row ${index % 2 === 0 ? 'row-normal' : 'row-reverse'}`} key={index}>
-            <div className="project-img-wrapper">
-              <img src={project.image} alt={project.title} className="project-img" />
-            </div>
+        {visibleProjects.map((project, index) => (
+          <div
+            className={`project-row ${index % 2 === 0 ? 'row-normal' : 'row-reverse'}`}
+            key={index}
+          >
+           <div className="project-img-wrapper">
+  <img src={project.image} alt={project.title} className="project-img" />
+
+  {/* 🔥 Hover Quick View */}
+  <div className="project-hover-overlay">
+    <h4>{project.title}</h4>
+
+    <p className="hover-desc">
+      {project.description.substring(0, 90)}...
+    </p>
+
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover-btn"
+    >
+      View Project
+      <FaArrowUpRightFromSquare />
+    </a>
+  </div>
+</div>
+
             <div className="project-details">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
+
               <ul className="tools-list">
                 {project.tools.map((tool, i) => (
                   <li key={i}>{tool}</li>
                 ))}
               </ul>
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-btn">
-                View Project ⌞⌝
-              </a>
+
+              <a
+  href={project.github}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="project-btn"
+>
+  View Live <FaArrowUpRightFromSquare className="project-btn-icon" />
+</a>
             </div>
           </div>
         ))}
       </div>
+
+      {hasMoreProjects && (
+        <div className="projects-toggle-wrapper">
+          <button
+            className="project-btn projects-toggle-btn"
+            onClick={() => setShowAll((prev) => !prev)}
+          >
+            {showAll ? 'Show Less' : 'View More'}
+          </button>
+        </div>
+      )}
     </section>
   );
 };
