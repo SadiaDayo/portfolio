@@ -32,7 +32,26 @@ const projects = [
       'https://www.canva.com/design/DAGxws-OGLo/ZVPLd734rKwkiSQkXW8WNA/watch?utm_content=DAGxws-OGLo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf4e66ec524',
     category: 'Web Development',
   },
+ {
+  title: 'LoveCards Website UI Design',
+  image: '/images/LovecardsUI.png', 
+  description:
+    'A modern one-product Shopify-style homepage design for a handmade floral greeting card brand. Focused on minimalism, emotional storytelling, and conversion-driven layout.',
+  tools: ['Figma', 'UI/UX Design', 'Landing Page Design', 'Branding'],
+  github: 'https://www.figma.com/proto/wkJxwcN1mcVnn90E8lNRqX/LoveCardsWebsiteUI?node-id=1-2&p=f&t=ACpxINCX5RASXIxX-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=50%3A729',
+  category: 'UI/UX Design',
  
+},
+{
+  title: 'Creative Hub – Logo & Poster Design',
+  image: '/images/creativehub.png',
+  description:
+  'Designed a logo and promotional poster for Creative Hub, focusing on brand identity, typography, and visual storytelling. This project helped me explore creative direction, refine design decisions, and improve my understanding of what makes a brand visually effective.',
+  tools: ['Canva', 'Logo Design', 'Poster Design', 'Brand Identity'],
+  github: 'https://www.linkedin.com/posts/sadia-dayo_graphicdesign-learningjourney-creativity-ugcPost-7452321678229069825-WFKk?utm_source=share&utm_medium=member_desktop&rcm=ACoAAER1JsgBRKr23zCxy1udMcngDaH4Va3c_J0', 
+  category: 'UI/UX Design',
+ 
+},
   {
     title: 'Brochure & Magazine Design – Oasis Infobyte Internship',
     image: '/images/brochure.png',
@@ -190,7 +209,7 @@ const categories = [
   { name: 'UI/UX Design', icon: <FaPaintBrush /> },
 ];
 
-const INITIAL_VISIBLE = 4;
+const INITIAL_VISIBLE = 5;
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
