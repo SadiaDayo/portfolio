@@ -38,7 +38,7 @@ const projects = [
   description:
     'A modern one-product Shopify-style homepage design for a handmade floral greeting card brand. Focused on minimalism, emotional storytelling, and conversion-driven layout.',
   tools: ['Figma', 'UI/UX Design', 'Landing Page Design', 'Branding'],
-  github: 'https://www.figma.com/proto/wkJxwcN1mcVnn90E8lNRqX/LoveCardsWebsiteUI?node-id=1-2&p=f&t=ACpxINCX5RASXIxX-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=50%3A729',
+  github: 'https://www.figma.com/proto/wkJxwcN1mcVnn90E8lNRqX/LoveCardsWebsiteUI?node-id=1-2&t=Zhu2oFE7jznxC8E0-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=50%3A729',
   category: 'UI/UX Design',
  
 },
