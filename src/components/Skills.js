@@ -158,6 +158,7 @@ const Skills = () => {
               { name: 'HTML5 / CSS3', level: 5 },
               { name: 'Bootstrap', level: 5 },
               { name: 'Tailwind CSS', level: 3 },
+               { name: 'WordPress', level: 4 },
               { name: 'Flutter', level: 4 },
             ]}
           />
