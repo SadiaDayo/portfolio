@@ -12,6 +12,21 @@ const projects = [
     github: 'https://tumor-track.vercel.app/home',
     category: 'Web Development',
   },
+  {
+  title: 'Brew & Bloom – WordPress Coffee Shop Website',
+  image: '/images/Brewbloom.png',
+  description:
+    'A responsive coffee shop website built with WordPress as a hands-on learning project. Designed with a warm café-inspired visual identity, structured content, responsive layouts, mobile-friendly navigation, menu and gallery pages, and contact and customer feedback forms.',
+  tools: [
+    'WordPress',
+    'Web Design',
+    'Responsive Design',
+    'UI/UX Design',
+    'Content Management',
+  ],
+  github: 'https://coffeeshop524.wordpress.com/',
+  category: 'Web Development',
+},
    {
     title: 'Bykea App UI Redesign',
     image: '/images/bykeaui.png',
