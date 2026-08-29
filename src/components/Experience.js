@@ -5,6 +5,7 @@ import './Experience.css'
 import pic from '../assets/icon.png';
 import img from '../assets/img.png';
 import img2 from '../assets/pic.png';
+import img3 from '../assets/remote.jpg';
 import cert1 from '../assets/cert6.png';
 import cert2 from '../assets/cert2.png';
 import cert3 from '../assets/cert3.png';
@@ -17,7 +18,7 @@ import cert9 from '../assets/cert9.jpeg';
 import cert10 from '../assets/cert10.jpeg';
 import cert11 from '../assets/cert11.jpeg';
 import cert12 from '../assets/cert12.jpeg';
-
+import cert13 from '../assets/Nestle.png';
 const Experience = () => {
   const [lightboxImage, setLightboxImage] = useState(null);
 
@@ -26,6 +27,28 @@ const Experience = () => {
   }, []);
 
   const experiences = [
+  {
+    company: 'Development Fixture Pvt. Ltd. (DevFix Technologies), Sukkur',
+    role: 'Web Design & Development Intern',
+    duration: 'Feb 2026 – Jun 2026 | Remote',
+    description:
+      'Contributed to the development and improvement of the DevFix company website and developed Hyder Traders, a full-stack e-commerce website. Worked on responsive interfaces, product browsing, search and filtering, wishlist, cart, checkout, quotation, reviews, REST API integration, backend functionality, and database management.',
+    tools: [
+      'React.js',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'Bootstrap',
+      'Node.js',
+      'Express.js',
+      'MySQL',
+      'REST APIs',
+      'Git',
+      'GitHub',
+      'Vercel',
+    ],
+    image: img3,
+  },
     {
       company: 'Motiventive Software Company, Karachi',
       role: 'Web Developer Intern',
@@ -87,6 +110,13 @@ const Experience = () => {
     image: cert8,
     description: 'Explored collaboration with AI to generate innovative ideas and expert-level content through advanced prompting strategies.',
   },
+  {
+  title: 'Nestlé E-Learning 2024 | Sustainability',
+  issuer: 'Nestlé | 2024',
+  image: cert13,
+  description:
+    'Completed Nestlé’s e-learning program focused on sustainability and responsible practices.',
+},
     {
       title: 'Web Development Internship',
       issuer: 'Motiventive | 2025',
